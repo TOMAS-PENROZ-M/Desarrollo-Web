@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinePlus</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Estilo para efeto resaltado */
+        .highlight {
+            background-color: #0a94e4; /* Color de fondo al pasar el cursor */
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!--Contenedor para el inicio de sesion-->
+    <div class="formulario">
+        <h1>Bienvenido a CinePlus</h1>
+        <h2>Inicio de Sesión</h2>
+        <form action="#" method="post">
+            <div class="username">
+                <input type="text" id="usuario" name="usuario" required>
+                <label for="usuario">Nombre de Usuario</label>
+            </div>
+            <div class="username">
+                <input type="password" id="contraseña" name="contraseña" required>
+                <label for="contraseña">Contraseña</label>
+            </div>
+            <!--Futura opcion para recuperar contraseña-->
+            <div class="forgot_password">¿Olvido su contraseña?</div>
+            <!--Boton para enviar formulario-->
+            <input type="submit" value="Iniciar">
+            <div class="registrarse">
+                <!--Enlace para registrarse-->
+                ¿no tienes cuenta? <a href="registro.html">Regístrate</a>
+            </div>
+        </form>
+    </div>
+    <!--Pie de pagina-->
+    <footer>
+        <!--Apartado de derechos reservados y medios sociales-->
+        <div class="footer-derechos-social" onmouseover="highlightFooter(this)" onmouseout="removeHighlightFooter(this)">
+            <p>&copy; 2024 CinePlus. Todos los derechos reservados.</p>
+            <!--Lista de enlace para redes sociales-->
+            <ul class="social-media">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+        <!--Enlaces adicionales para el pie de pagina-->
+        <div class="footer-links">
+            <a href="#">Política de Privacidad</a> |
+            <a href="#">Términos y Condiciones</a> |
+            <a href="#">Contacto</a>
+        </div>
+    </footer>
+    <!--Script para manejar el efecto de resaltado-->
+    <script>
+        function highlightFooter(element) {
+            element.classList.add('highlight'); /*Añade el efecto resaltado cuando el mouse pasa por encima*/
+        }
+
+        function removeHighlightFooter(element) {
+            element.classList.remove('highlight'); /*Remueve el efecto resaltado cuando el mouse no pasa por encima*/
+        }
+    </script>
+</body>
+</html>

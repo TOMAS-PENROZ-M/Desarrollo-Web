@@ -1,0 +1,116 @@
+/*Se importa la fuente roboto de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+body{
+    /*Quita los margenes*/
+    margin: 0;
+    padding: 0;
+    /*Establece la fuente */
+    font-family: 'Roboto', sans-serif;
+    /*Se aplica una imagen de fondo*/
+    background-image: url(img/1512217.jpg);
+    background-size: cover;/*La imagen cubrira toda la pantalla*/
+    background-position: center;/*La imagen estara centrada*/
+    background-repeat: repeat;/*En caso de que la imagen sea mas pequeña que la pantalla esta se repite*/
+}
+
+.formulario{
+    /*posiciona al formulario de forma absoluta respecto al body*/
+    position: absolute;
+    top: 50%;/*psciona la imagen al 50% del alto de la pantalla */
+    left: 50%;/*posiciona la imagen al 50% del ancho de la pantalla*/
+    transform:translate(-50%, -50%);/*Centra el formulario ajustando su posicion con una traslacion*/
+    width: 200px;/*establece el ancho del formulario*/
+    /*aplica un color al fromulario y redondea los bordes*/
+    background-color: #a2edce;
+    border-radius: 10px ;
+}
+
+.formulario h1, h2{
+    text-align: center;/*centra el texto*/
+    border-bottom: 1px solid rgb(36, 134, 224);/*añade un borde inferior al h1 y h2*/
+    padding: 0 0 20px 0;/*añade padding inferior*/
+}
+
+.formulario form{
+    padding: 0 40px;
+    box-sizing: border-box;/*asegura que el padding no afecte el ancho del formulario*/
+    text-align: center;
+}
+
+form .username{
+    position: relative;
+    /*añade un borde inferior y un margen superior/inferior*/
+    border-bottom: 2px solid rgb(36, 134, 224);
+    margin: 30px 0;
+}
+
+.username input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    /*elimina los bordes y fondos predeterminados*/
+    border: none;
+    background: none;
+    outline: none; /*elimina el borde de foco*/
+}
+
+.username label{
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    color: rgb(70, 153, 231);
+    transform: translateY(-50%);
+}
+
+input[type="submit"]{
+    /*el boton de iniciar tendra un ancho de 50% y un alto de 50px*/
+    width: 50%;
+    height: 50px;
+    /*se aplica un borde y color de fondo*/
+    border: 1px solid;
+    background: rgb(52, 52, 216);
+    border-radius: 10px;/*se redondean los bordes*/
+    font-size: 15px;/*tamaño de fuente*/
+    /*color del texto y alineacion el mismo*/
+    color: aliceblue;
+    align-self: center;
+}
+
+input[type="submit"]:hover{ /*Cambia el color cuando el mouse pasa por encima*/
+    border-color: blue;
+}
+
+.username input:focus ~ label,/* con esto la etiqueta se mueve un poco hacia arriba y cambia de color*/
+.username input:focus ~ label{
+    top: -5px;
+    color: rgb(131, 12, 241);
+}
+
+.footer-derechos-social{
+    position: fixed; /* El fiexed se usa para que quede en la esquina inferior */
+    bottom: 0; /* Ancla al fondo de la ventana */
+    left: 0;/* Ancla al borde izquierdo de la ventana */
+    width: 28%; /* Se utiliza para ajustar el ancho */
+    background-color: #44ccd6;
+    border-radius: 10px;
+    padding: 10px; /* Ajusta el padding según tu diseño */
+    box-sizing: border-box;/* Asegúrate de que el padding no afecte el ancho total */
+}
+
+.highlight {
+    background-color: #0a94e4; /* Color de fondo al pasar el cursor */
+    transition: background-color 0.3s ease;
+}
+
+.footer-links{
+    position: fixed; /* El fiexed se usa para que quede en la esquina inferior */
+    bottom: 0; /* Ancla al fondo de la ventana */
+    right: 0; /* Ancla al borde derecho de la ventana */
+    width: 30%; /* Se utiliza para ajustar el ancho */
+    background-color: #a2edce;
+    border-radius: 10px;
+    padding: 10px; /* Ajusta el padding según tu diseño */
+    box-sizing: border-box; /* Asegúrate de que el padding no afecte el ancho total */
+}
