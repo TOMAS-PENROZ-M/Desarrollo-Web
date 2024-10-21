@@ -3,17 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>CinePlus Registro</title>
+    <link rel="stylesheet" href="registro.css">
 </head>
 <body>
-    <h1>Registro</h1>
+    <script src="ValidaRegistro.js"></script>
+    <div class="contenedor">
+        <h1>Registro</h1>
+        <form action="conex.php" method="post" onsubmit="return validaRegistro(event);">
+            <div class="input-container">
+                <label for="nombre_usuario">Nombre:</label><br>
+                <input type="text" id="nombre_usuario" name="nombre_usuario" required><br>
+            </div>
+            <br>
 
-    <form action="inserta_usuario.php" method="get">
-        <h2>Insertar Usuario</h2>
-        Nombre: <input type="text" name="nombre" required><br>
-        Correo: <input type="email" name="correo" required><br>
-        Contraseña: <input type="password" name="contraseña" required><br>
-        <input type="submit" value="Insertar Usuario">
-    </form>
+            <div class="input-container">
+                <label for="email">Correo:</label><br>
+                <input type="email" id="email" name="email" required><br>
+            </div class="input-container">
+            <br>
+
+            <div class="input-container">
+                <label for="contraseña">Contraseña:</label><br>
+                <input type="password" id="contraseña" name="contraseña" required><br>
+            </div>
+            <br>
+            
+            <input type="submit" value="Insertar Usuario">
+        </form>
+    </div>
 </body>
 </html>

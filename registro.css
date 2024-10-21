@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    background-color: #1C1C1C;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor{
+    margin-top: 100px;
+    background-color: #2B2B2B;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.contenedor label{
+    top: 50%;
+    left: 10px;
+    width: 100%;
+    border-radius: 8px;
+}
