@@ -93,3 +93,21 @@ p {
     font-size: 0.9rem;
     color: #bbb;
 }
+
+.preview {
+    display: none; /* Oculta la vista previa por defecto */
+    position: absolute; /* Permite posicionar la vista previa */
+    border: 1px solid #ccc; /* Añade un borde */
+    background-color: rgb(83, 83, 83); /* Color de fondo */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    padding: 10px; /* Espaciado interno */
+    max-width: calc(100vw - 20px); /* Evita que se salga del borde derecho */
+    max-height: calc(100vh - 20px); /* Evita que se salga del borde inferior */
+    overflow: hidden; /* Evita el desbordamiento */
+    border-radius: 8px;
+}
+
+.preview img {
+    width: 200px; /* Ancho fijo */
+    height: auto; /* Altura automática para mantener la proporción */
+}

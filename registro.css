@@ -1,25 +1,88 @@
-body{
+/* Estilo general del cuerpo */
+body {
     display: flex;
-    background-color: #1C1C1C;
+    background-color: #424242; /* Negro oscuro */
     align-items: center;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-.contenedor{
-    margin-top: 100px;
-    background-color: #2B2B2B;
+/* Contenedor principal del formulario */
+.contenedor {
+    background-color: #2B2B2B; /* Negro grisáceo */
     padding: 30px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     text-align: center;
+    color: #fff; /* Blanco */
 }
 
-.contenedor label{
-    top: 50%;
-    left: 10px;
+/* Título del formulario */
+h1 {
+    margin-bottom: 20px;
+    color: #D3D3D3; /* Gris claro */
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+/* Estilos para cada etiqueta de los campos */
+.contenedor label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #B0B0B0; /* Gris medio */
+}
+
+/* Estilos para los campos de entrada */
+.input-container input {
     width: 100%;
-    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #888; /* Gris medio */
+    border-radius: 4px;
+    background-color: #1C1C1C; /* Negro oscuro */
+    color: #fff; /* Blanco */
+    font-size: 14px;
+}
+
+/* Placeholder del input */
+.input-container input::placeholder {
+    color: #A9A9A9; /* Gris suave */
+}
+
+/* Efecto hover en los campos de entrada */
+.input-container input:focus {
+    outline: none;
+    border-color: #B0B0B0; /* Gris medio */
+    box-shadow: 0 0 5px rgba(176, 176, 176, 0.5); /* Sombra gris suave */
+}
+
+/* Estilo del botón de envío */
+input[type="submit"] {
+    background-color: #333; /* Negro grisáceo */
+    color: #fff; /* Blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover del botón de envío */
+input[type="submit"]:hover {
+    background-color: #555; /* Gris oscuro */
+}
+
+/* Efecto de sombra en el botón al hacer clic */
+input[type="submit"]:active {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Sombra blanca suave */
 }
