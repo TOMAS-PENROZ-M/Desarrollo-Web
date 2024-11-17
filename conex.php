@@ -24,11 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO Usuarios (nombre_usuario, email, contraseña, tipo_usuario) VALUES ('$nombre_usuario', '$email', '$contraseña', '$tipo_usuario')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Usuario registrado exitosamente.<br><br>";
+        //el usuario es redirigido a la pagina de inicio de sesion
+        header("Location: index.html");
+        exit();
     } else {
         echo "Error al registrar el usuario: " . $conn->error;
     }
-
+/*Comentado pues ya no se ocupara
     $sql = "SELECT * FROM Usuarios";
     $result = $conn->query($sql);
 
@@ -56,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "</table>";
     } else {
         echo "No hay registros.";
-    }
+    }*/
 }
 
 $conn->close();
